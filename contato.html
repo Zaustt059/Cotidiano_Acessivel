@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relato do Cotidiano | Cotidiano Acessível</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="skip-links">
+    <a href="#conteudo-principal">Ir para o conteúdo principal</a>
+    <a href="#menu-principal">Ir para o menu de navegação</a>
+    <a href="#rodape">Ir para o rodapé</a>
+  </div>
+
+  <section class="a11y-toolbar" aria-label="Barra de ferramentas de acessibilidade">
+    <div class="a11y-toolbar-inner">
+      <ul class="a11y-shortcuts">
+        <li><a href="#conteudo-principal" accesskey="1">Conteúdo <kbd>Alt+1</kbd></a></li>
+        <li><a href="#menu-principal" accesskey="2">Menu <kbd>Alt+2</kbd></a></li>
+        <li><a href="#rodape" accesskey="3">Rodapé <kbd>Alt+3</kbd></a></li>
+      </ul>
+      <div class="a11y-controls" role="group" aria-label="Controles rápidos de acessibilidade">
+        <button type="button" id="btn-contrast" class="a11y-btn" aria-pressed="false">Alto Contraste</button>
+        <button type="button" id="btn-dark-mode" class="a11y-btn" aria-pressed="false">Modo Escuro</button>
+        <button type="button" id="btn-font-up" class="a11y-btn" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" id="btn-font-reset" class="a11y-btn" aria-label="Restaurar tamanho padrão da fonte">A</button>
+        <button type="button" id="btn-font-down" class="a11y-btn" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button type="button" id="btn-a11y-drawer" class="a11y-btn" aria-expanded="false" aria-controls="a11y-drawer">Mais Recursos</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="a11y-drawer" class="a11y-drawer" aria-label="Painel avançado de acessibilidade" hidden>
+    <div class="a11y-drawer-inner">
+      <div class="a11y-drawer-header">
+        <h2>Central de Recursos Assistivos</h2>
+        <div>
+          <button type="button" id="btn-reset-a11y" class="a11y-btn-light" style="margin-right: 0.5rem;">Restaurar Padrão</button>
+          <button type="button" id="btn-a11y-close" class="a11y-btn-light">Fechar (Esc)</button>
+        </div>
+      </div>
+
+      <div class="a11y-grid">
+        <button type="button" id="btn-dyslexia" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Espaçamento Dislexia</span>
+          <span class="a11y-tile-desc">Aumenta altura da linha e distância entre letras e palavras.</span>
+        </button>
+
+        <button type="button" id="btn-highlight-links" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Destacar Todos os Links</span>
+          <span class="a11y-tile-desc">Aplica fundo amarelo e borda visível em cada link da página.</span>
+        </button>
+
+        <button type="button" id="btn-reading-ruler" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Régua Guia de Leitura</span>
+          <span class="a11y-tile-desc">Exibe uma linha horizontal que acompanha o cursor na leitura.</span>
+        </button>
+
+        <button type="button" id="btn-reading-mask" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Máscara de Foco</span>
+          <span class="a11y-tile-desc">Escurece o entorno e mantém iluminada apenas a faixa de leitura.</span>
+        </button>
+
+        <button type="button" id="btn-reduce-motion" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Pausar Animações</span>
+          <span class="a11y-tile-desc">Desativa transições e movimentos visuais na interface.</span>
+        </button>
+
+        <div class="a11y-tile" style="cursor: default;">
+          <label for="select-color-sim" class="a11y-tile-title" style="margin: 0;">Filtro de Percepção de Cores</label>
+          <select id="select-color-sim" style="margin-top: 0.35rem; padding: 0.4rem; font-size: 0.88rem;">
+            <option value="none">Visão Padrão</option>
+            <option value="protanopia">Simular: Vermelho/Verde</option>
+            <option value="tritanopia">Simular: Azul/Amarelo</option>
+            <option value="monochromacy">Simular: Monocromacia</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="a11y-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-brand">
+        <span class="brand-badge" aria-hidden="true">CA</span>
+        <span>
+          <span class="brand-title">Cotidiano Acessível</span>
+          <span class="brand-subtitle">Artigos e relatos sobre inclusão na vida diária</span>
+        </span>
+      </a>
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal do portal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade-cidade.html">Cidade e Transporte</a></li>
+          <li><a href="servicos-digitais.html">Bancos, Saúde e Serviços</a></li>
+          <li><a href="educacao-cultura.html">Educação e Cultura</a></li>
+          <li><a href="glossario.html">Glossário</a></li>
+          <li><a href="contato.html" aria-current="page">Relato do Cotidiano</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Você está aqui">
+      <ol>
+        <li><a href="index.html">Início</a></li>
+        <li aria-current="page">Relato do Cotidiano</li>
+      </ol>
+    </nav>
+    <article aria-labelledby="titulo-contato">
+      <header class="hero">
+        <span class="hero-tag">Participação Cidadã • Relatos Reais</span>
+        <h1 id="titulo-contato">Compartilhe uma Experiência de Acessibilidade no Cotidiano</h1>
+        <p class="lead">
+          Você já enfrentou uma barreira no transporte, em um hospital, na escola ou em um aplicativo do dia a dia — ou presenciou um ótimo exemplo de inclusão? Envie seu relato pelo formulário acessível abaixo.
+        </p>
+      </header>
+
+      <section class="article-section" aria-labelledby="sec-form">
+        <h2 id="sec-form">Formulário de Relato e Sugestão</h2>
+        <p>Os campos sinalizados com <strong>(obrigatório)</strong> são necessários para registrar sua contribuição.</p>
+
+        <form id="relato-form" novalidate>
+          <div class="form-group">
+            <label for="nome">Seu nome completo <span class="req-badge">(obrigatório)</span></label>
+            <input type="text" id="nome" name="nome" required autocomplete="name" aria-describedby="err-nome">
+            <span id="err-nome" class="error-msg" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail para contato <span class="req-badge">(obrigatório)</span></label>
+            <span id="hint-email" class="field-hint">Exemplo: leitor@exemplo.com.br</span>
+            <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="hint-email err-email">
+            <span id="err-email" class="error-msg" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="local-cotidiano">Ambiente da vida cotidiana <span class="req-badge">(obrigatório)</span></label>
+            <select id="local-cotidiano" name="local-cotidiano" required aria-describedby="err-local">
+              <option value="">Selecione onde ocorreu a situação...</option>
+              <option value="transporte-rua">Transporte público, calçadas ou trânsito</option>
+              <option value="bancos-compras">Bancos, supermercados, lojas ou aplicativos</option>
+              <option value="saude">Hospitais, clínicas ou farmácias</option>
+              <option value="educacao-lazer">Escolas, universidades, cinemas ou museus</option>
+            </select>
+            <span id="err-local" class="error-msg" role="alert"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="mensagem">Conte sua experiência ou sugestão <span class="req-badge">(obrigatório)</span></label>
+            <span id="hint-mensagem" class="field-hint">Descreva o que aconteceu e como a acessibilidade (ou a falta dela) impactou o dia a dia.</span>
+            <textarea id="mensagem" name="mensagem" rows="5" required aria-describedby="hint-mensagem err-mensagem"></textarea>
+            <span id="err-mensagem" class="error-msg" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn-primary">Enviar relato do cotidiano</button>
+        </form>
+
+        <div id="form-feedback" tabindex="-1" role="status" aria-live="polite"></div>
+      </section>
+    </article>
+  </main>
+
+  <footer id="rodape" class="site-footer" tabindex="-1">
+    <div class="footer-inner">
+      <div>
+        <p><strong>Portal Cotidiano Acessível</strong> — Projeto Acadêmico de Programação Web (TDE 02).</p>
+        <p>Conteúdo dedicado à acessibilidade na vida cotidiana, construído com HTML5 semântico, CSS3 responsivo e recursos assistivos alinhados às diretrizes WCAG 2.1 (AA/AAA) e eMAG 3.1.</p>
+      </div>
+      <nav aria-label="Mapa do portal no rodapé">
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade-cidade.html">Cidade e Transporte</a></li>
+          <li><a href="servicos-digitais.html">Bancos, Saúde e Serviços</a></li>
+          <li><a href="educacao-cultura.html">Educação e Cultura</a></li>
+          <li><a href="glossario.html">Glossário</a></li>
+          <li><a href="contato.html">Relato do Cotidiano</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    if (window.VLibras) {
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    }
+  </script>
+  <script src="js/acessibilidade.js"></script>
+</body>
+</html>

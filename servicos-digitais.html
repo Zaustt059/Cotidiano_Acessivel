@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bancos, Saúde e Serviços | Cotidiano Acessível</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="skip-links">
+    <a href="#conteudo-principal">Ir para o conteúdo principal</a>
+    <a href="#menu-principal">Ir para o menu de navegação</a>
+    <a href="#rodape">Ir para o rodapé</a>
+  </div>
+
+  <section class="a11y-toolbar" aria-label="Barra de ferramentas de acessibilidade">
+    <div class="a11y-toolbar-inner">
+      <ul class="a11y-shortcuts">
+        <li><a href="#conteudo-principal" accesskey="1">Conteúdo <kbd>Alt+1</kbd></a></li>
+        <li><a href="#menu-principal" accesskey="2">Menu <kbd>Alt+2</kbd></a></li>
+        <li><a href="#rodape" accesskey="3">Rodapé <kbd>Alt+3</kbd></a></li>
+      </ul>
+      <div class="a11y-controls" role="group" aria-label="Controles rápidos de acessibilidade">
+        <button type="button" id="btn-contrast" class="a11y-btn" aria-pressed="false">Alto Contraste</button>
+        <button type="button" id="btn-dark-mode" class="a11y-btn" aria-pressed="false">Modo Escuro</button>
+        <button type="button" id="btn-font-up" class="a11y-btn" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" id="btn-font-reset" class="a11y-btn" aria-label="Restaurar tamanho padrão da fonte">A</button>
+        <button type="button" id="btn-font-down" class="a11y-btn" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button type="button" id="btn-a11y-drawer" class="a11y-btn" aria-expanded="false" aria-controls="a11y-drawer">Mais Recursos</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="a11y-drawer" class="a11y-drawer" aria-label="Painel avançado de acessibilidade" hidden>
+    <div class="a11y-drawer-inner">
+      <div class="a11y-drawer-header">
+        <h2>Central de Recursos Assistivos</h2>
+        <div>
+          <button type="button" id="btn-reset-a11y" class="a11y-btn-light" style="margin-right: 0.5rem;">Restaurar Padrão</button>
+          <button type="button" id="btn-a11y-close" class="a11y-btn-light">Fechar (Esc)</button>
+        </div>
+      </div>
+
+      <div class="a11y-grid">
+        <button type="button" id="btn-dyslexia" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Espaçamento Dislexia</span>
+          <span class="a11y-tile-desc">Aumenta altura da linha e distância entre letras e palavras.</span>
+        </button>
+
+        <button type="button" id="btn-highlight-links" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Destacar Todos os Links</span>
+          <span class="a11y-tile-desc">Aplica fundo amarelo e borda visível em cada link da página.</span>
+        </button>
+
+        <button type="button" id="btn-reading-ruler" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Régua Guia de Leitura</span>
+          <span class="a11y-tile-desc">Exibe uma linha horizontal que acompanha o cursor na leitura.</span>
+        </button>
+
+        <button type="button" id="btn-reading-mask" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Máscara de Foco</span>
+          <span class="a11y-tile-desc">Escurece o entorno e mantém iluminada apenas a faixa de leitura.</span>
+        </button>
+
+        <button type="button" id="btn-reduce-motion" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Pausar Animações</span>
+          <span class="a11y-tile-desc">Desativa transições e movimentos visuais na interface.</span>
+        </button>
+
+        <div class="a11y-tile" style="cursor: default;">
+          <label for="select-color-sim" class="a11y-tile-title" style="margin: 0;">Filtro de Percepção de Cores</label>
+          <select id="select-color-sim" style="margin-top: 0.35rem; padding: 0.4rem; font-size: 0.88rem;">
+            <option value="none">Visão Padrão</option>
+            <option value="protanopia">Simular: Vermelho/Verde</option>
+            <option value="tritanopia">Simular: Azul/Amarelo</option>
+            <option value="monochromacy">Simular: Monocromacia</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="a11y-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-brand">
+        <span class="brand-badge" aria-hidden="true">CA</span>
+        <span>
+          <span class="brand-title">Cotidiano Acessível</span>
+          <span class="brand-subtitle">Artigos e relatos sobre inclusão na vida diária</span>
+        </span>
+      </a>
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal do portal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade-cidade.html">Cidade e Transporte</a></li>
+          <li><a href="servicos-digitais.html" aria-current="page">Bancos, Saúde e Serviços</a></li>
+          <li><a href="educacao-cultura.html">Educação e Cultura</a></li>
+          <li><a href="glossario.html">Glossário</a></li>
+          <li><a href="contato.html">Relato do Cotidiano</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Você está aqui">
+      <ol>
+        <li><a href="index.html">Início</a></li>
+        <li aria-current="page">Bancos, Saúde e Serviços</li>
+      </ol>
+    </nav>
+    <article aria-labelledby="titulo-servicos">
+      <header class="hero">
+        <span class="hero-tag">Artigo • Vida Digital e Serviços Essenciais</span>
+        <h1 id="titulo-servicos">Bancos, Farmácias e Consultas Online: Quando a Barreira Está na Tela</h1>
+        <p class="lead">
+          Pagar uma conta de luz, agendar uma consulta médica, pedir comida ou acompanhar o boletim escolar hoje acontece pela tela do celular ou do computador. Quando esses serviços ignoram a acessibilidade, tarefas simples viram motivo de dependência e perda de privacidade.
+        </p>
+        <div class="article-meta">
+          <span>Tempo estimado de leitura: 4 minutos</span>
+          <span>Tema: Autonomia Financeira, Saúde e Consumo</span>
+        </div>
+      </header>
+
+      <nav id="sumario-servicos" class="toc-box" aria-labelledby="titulo-sumario-serv">
+        <h2 id="titulo-sumario-serv">Neste Artigo</h2>
+        <ul>
+          <li><a href="#privacidade-financeira">1. Privacidade financeira: o direito de usar o banco sem pedir ajuda</a></li>
+          <li><a href="#saude-atendimento">2. Clínicas, hospitais e bulas acessíveis</a></li>
+          <li><a href="#audio-cotidiano">3. Ouça o relato de quem usa leitor de tela no dia a dia</a></li>
+        </ul>
+      </nav>
+
+      <section id="privacidade-financeira" class="article-section">
+        <h2>1. Privacidade financeira: o direito de usar o banco sem pedir ajuda</h2>
+        <p>
+          Imagine precisar informar sua senha bancária ou o valor do seu salário a um desconhecido na fila do caixa eletrônico porque a tela não possui saída de áudio ou porque o aplicativo do banco não lê os botões corretamente.
+        </p>
+        <p>
+          A acessibilidade digital no cotidiano significa <strong>autonomia e privacidade</strong>. Quando um aplicativo bancário ou loja virtual identifica corretamente cada campo ("Número do cartão", "Valor da transferência", "Confirmar pagamento"), uma pessoa cega realiza toda a operação sozinha, usando fones de ouvido e seu leitor de tela (como TalkBack no Android, VoiceOver no iPhone ou NVDA no computador).
+        </p>
+        <ul>
+          <li><strong>Códigos de verificação (CAPTCHA) alternativos:</strong> Desafios que pedem apenas para "clicar nos semáforos" bloqueiam usuários cegos se não houver alternativa em áudio ou lógica acessível.</li>
+          <li><strong>Tempo suficiente para concluir operações:</strong> Sessões bancárias que expiram em 30 segundos prejudicam pessoas com mobilidade reduzida que digitam mais devagar ou usam acionadores adaptados.</li>
+        </ul>
+        <a class="back-top" href="#sumario-servicos">Voltar ao índice do artigo</a>
+      </section>
+
+      <section id="saude-atendimento" class="article-section">
+        <h2>2. Clínicas, hospitais e bulas acessíveis</h2>
+        <p>
+          Na área da saúde, a falta de acessibilidade compromete diretamente o bem-estar do cidadão. Em muitas clínicas, o painel eletrônico apenas exibe o número da senha na parede com um bip genérico. Se não houver chamada por voz anunciando o nome e a sala, o paciente cego precisa pedir que outros pacientes o avisem.
+        </p>
+        <p>
+          O mesmo vale para farmácias e medicamentos: caixas com identificação em <strong>Braille</strong> e bulas digitais acessíveis permitem que o paciente confira a dosagem e a validade do remédio com segurança. Além disso, o atendimento em saúde deve prever comunicação em Libras (presencial ou por videochamada com central de intérpretes) para que pacientes surdos relatem seus sintomas diretamente ao médico.
+        </p>
+        <a class="back-top" href="#sumario-servicos">Voltar ao índice do artigo</a>
+      </section>
+
+      <section id="audio-cotidiano" class="article-section">
+        <h2>3. Ouça o relato sintetizado e leia a transcrição completa</h2>
+        <p>
+          Para ilustrar como a informação sonora e textual caminhando juntas garantem acesso universal, você pode ouvir o trecho abaixo por síntese de voz ou ler a transcrição logo em seguida:
+        </p>
+        <div class="toc-box">
+          <p><strong>Depoimento ilustrativo sobre autonomia digital:</strong></p>
+          <button type="button" id="btn-tts-cotidiano" class="btn-primary">Ouvir depoimento em áudio</button>
+          <button type="button" id="btn-tts-cotidiano-stop" class="a11y-btn-light" style="margin-left: 0.5rem;">Parar leitura</button>
+          <p id="tts-cotidiano-status" class="field-hint" style="margin-top: 0.5rem;"></p>
+
+          <details>
+            <summary>Ler transcrição textual completa</summary>
+            <p>
+              <strong>Transcrição:</strong> "Quando o aplicativo do supermercado ou do banco funciona bem com o leitor de tela, eu escolho meus produtos, confiro os preços e pago minhas contas no meu tempo, dentro da minha casa, sem depender da disponibilidade de ninguém. Acessibilidade no cotidiano é exatamente isso: liberdade para viver a própria rotina."
+            </p>
+          </details>
+        </div>
+        <a class="back-top" href="#sumario-servicos">Voltar ao índice do artigo</a>
+      </section>
+    </article>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const playBtn = document.getElementById("btn-tts-cotidiano");
+        const stopBtn = document.getElementById("btn-tts-cotidiano-stop");
+        const statusEl = document.getElementById("tts-cotidiano-status");
+        const texto = "Quando o aplicativo do supermercado ou do banco funciona bem com o leitor de tela, eu escolho meus produtos, confiro os preços e pago minhas contas no meu tempo, dentro da minha casa, sem depender da disponibilidade de ninguém. Acessibilidade no cotidiano é exatamente isso: liberdade para viver a própria rotina.";
+        if (playBtn && "speechSynthesis" in window) {
+          playBtn.addEventListener("click", function () {
+            window.speechSynthesis.cancel();
+            const u = new SpeechSynthesisUtterance(texto);
+            u.lang = "pt-BR";
+            u.onstart = function () { statusEl.textContent = "Reproduzindo depoimento em português..."; };
+            u.onend = function () { statusEl.textContent = "Reprodução concluída."; };
+            window.speechSynthesis.speak(u);
+          });
+          stopBtn.addEventListener("click", function () {
+            window.speechSynthesis.cancel();
+            statusEl.textContent = "Áudio interrompido.";
+          });
+        }
+      });
+    </script>
+  </main>
+
+  <footer id="rodape" class="site-footer" tabindex="-1">
+    <div class="footer-inner">
+      <div>
+        <p><strong>Portal Cotidiano Acessível</strong> — Projeto Acadêmico de Programação Web (TDE 02).</p>
+        <p>Conteúdo dedicado à acessibilidade na vida cotidiana, construído com HTML5 semântico, CSS3 responsivo e recursos assistivos alinhados às diretrizes WCAG 2.1 (AA/AAA) e eMAG 3.1.</p>
+      </div>
+      <nav aria-label="Mapa do portal no rodapé">
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade-cidade.html">Cidade e Transporte</a></li>
+          <li><a href="servicos-digitais.html">Bancos, Saúde e Serviços</a></li>
+          <li><a href="educacao-cultura.html">Educação e Cultura</a></li>
+          <li><a href="glossario.html">Glossário</a></li>
+          <li><a href="contato.html">Relato do Cotidiano</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    if (window.VLibras) {
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    }
+  </script>
+  <script src="js/acessibilidade.js"></script>
+</body>
+</html>

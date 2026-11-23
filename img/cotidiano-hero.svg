@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" role="img" aria-labelledby="t1 d1">
+  <title id="t1">Acessibilidade presente nos espaços e serviços da vida cotidiana</title>
+  <desc id="d1">Ilustração mostrando quatro cenários do dia a dia: transporte público acessível, atendimento em saúde e bancos, cultura com audiodescrição e Libras, e calçadas com piso tátil e rampa.</desc>
+  <rect width="800" height="300" rx="18" fill="#0f172a"/>
+  <circle cx="720" cy="50" r="90" fill="#1e3a8a" opacity="0.45"/>
+  <circle cx="80" cy="260" r="80" fill="#0284c7" opacity="0.25"/>
+
+  <g transform="translate(36, 36)">
+    <rect width="164" height="228" rx="14" fill="#1e293b" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="82" cy="56" r="26" fill="#0284c7"/>
+    <text x="82" y="63" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="bold">BUS</text>
+    <text x="82" y="112" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="bold">Transporte</text>
+    <text x="82" y="138" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="12">Plataforma elevatória,</text>
+    <text x="82" y="156" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="12">aviso sonoro de parada</text>
+    <text x="82" y="174" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="12">e painel luminoso.</text>
+  </g>
+
+  <g transform="translate(224, 36)">
+    <rect width="164" height="228" rx="14" fill="#1e293b" stroke="#34d399" stroke-width="2"/>
+    <circle cx="82" cy="56" r="26" fill="#059669"/>
+    <text x="82" y="63" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="bold">PIX</text>
+    <text x="82" y="112" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="bold">Bancos e Saúde</text>
+    <text x="82" y="138" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="12">Caixas com fone,</text>
+    <text x="82" y="156" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="12">apps com leitor de tela</text>
+    <text x="82" y="174" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="12">e senhas em áudio.</text>
+  </g>
+
+  <g transform="translate(412, 36)">
+    <rect width="164" height="228" rx="14" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+    <circle cx="82" cy="56" r="26" fill="#d97706"/>
+    <text x="82" y="63" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="bold">CC</text>
+    <text x="82" y="112" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="bold">Cultura e Lazer</text>
+    <text x="82" y="138" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="12">Audiodescrição no</text>
+    <text x="82" y="156" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="12">cinema, legendas CC e</text>
+    <text x="82" y="174" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="12">maquetes táteis.</text>
+  </g>
+
+  <g transform="translate(600, 36)">
+    <rect width="164" height="228" rx="14" fill="#1e293b" stroke="#a78bfa" stroke-width="2"/>
+    <circle cx="82" cy="56" r="26" fill="#7c3aed"/>
+    <text x="82" y="63" text-anchor="middle" fill="#ffffff" font-family="sans-serif" font-size="14" font-weight="bold">RUA</text>
+    <text x="82" y="112" text-anchor="middle" fill="#f8fafc" font-family="sans-serif" font-size="15" font-weight="bold">Espaço Urbano</text>
+    <text x="82" y="138" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="12">Rampas com inclinação</text>
+    <text x="82" y="156" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="12">correta, piso podotátil</text>
+    <text x="82" y="174" text-anchor="middle" fill="#cbd5e1" font-family="sans-serif" font-size="12">e semáforo sonoro.</text>
+  </g>
+</svg>

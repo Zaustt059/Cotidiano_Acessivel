@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educação e Cultura | Cotidiano Acessível</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="skip-links">
+    <a href="#conteudo-principal">Ir para o conteúdo principal</a>
+    <a href="#menu-principal">Ir para o menu de navegação</a>
+    <a href="#rodape">Ir para o rodapé</a>
+  </div>
+
+  <section class="a11y-toolbar" aria-label="Barra de ferramentas de acessibilidade">
+    <div class="a11y-toolbar-inner">
+      <ul class="a11y-shortcuts">
+        <li><a href="#conteudo-principal" accesskey="1">Conteúdo <kbd>Alt+1</kbd></a></li>
+        <li><a href="#menu-principal" accesskey="2">Menu <kbd>Alt+2</kbd></a></li>
+        <li><a href="#rodape" accesskey="3">Rodapé <kbd>Alt+3</kbd></a></li>
+      </ul>
+      <div class="a11y-controls" role="group" aria-label="Controles rápidos de acessibilidade">
+        <button type="button" id="btn-contrast" class="a11y-btn" aria-pressed="false">Alto Contraste</button>
+        <button type="button" id="btn-dark-mode" class="a11y-btn" aria-pressed="false">Modo Escuro</button>
+        <button type="button" id="btn-font-up" class="a11y-btn" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" id="btn-font-reset" class="a11y-btn" aria-label="Restaurar tamanho padrão da fonte">A</button>
+        <button type="button" id="btn-font-down" class="a11y-btn" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button type="button" id="btn-a11y-drawer" class="a11y-btn" aria-expanded="false" aria-controls="a11y-drawer">Mais Recursos</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="a11y-drawer" class="a11y-drawer" aria-label="Painel avançado de acessibilidade" hidden>
+    <div class="a11y-drawer-inner">
+      <div class="a11y-drawer-header">
+        <h2>Central de Recursos Assistivos</h2>
+        <div>
+          <button type="button" id="btn-reset-a11y" class="a11y-btn-light" style="margin-right: 0.5rem;">Restaurar Padrão</button>
+          <button type="button" id="btn-a11y-close" class="a11y-btn-light">Fechar (Esc)</button>
+        </div>
+      </div>
+
+      <div class="a11y-grid">
+        <button type="button" id="btn-dyslexia" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Espaçamento Dislexia</span>
+          <span class="a11y-tile-desc">Aumenta altura da linha e distância entre letras e palavras.</span>
+        </button>
+
+        <button type="button" id="btn-highlight-links" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Destacar Todos os Links</span>
+          <span class="a11y-tile-desc">Aplica fundo amarelo e borda visível em cada link da página.</span>
+        </button>
+
+        <button type="button" id="btn-reading-ruler" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Régua Guia de Leitura</span>
+          <span class="a11y-tile-desc">Exibe uma linha horizontal que acompanha o cursor na leitura.</span>
+        </button>
+
+        <button type="button" id="btn-reading-mask" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Máscara de Foco</span>
+          <span class="a11y-tile-desc">Escurece o entorno e mantém iluminada apenas a faixa de leitura.</span>
+        </button>
+
+        <button type="button" id="btn-reduce-motion" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Pausar Animações</span>
+          <span class="a11y-tile-desc">Desativa transições e movimentos visuais na interface.</span>
+        </button>
+
+        <div class="a11y-tile" style="cursor: default;">
+          <label for="select-color-sim" class="a11y-tile-title" style="margin: 0;">Filtro de Percepção de Cores</label>
+          <select id="select-color-sim" style="margin-top: 0.35rem; padding: 0.4rem; font-size: 0.88rem;">
+            <option value="none">Visão Padrão</option>
+            <option value="protanopia">Simular: Vermelho/Verde</option>
+            <option value="tritanopia">Simular: Azul/Amarelo</option>
+            <option value="monochromacy">Simular: Monocromacia</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="a11y-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-brand">
+        <span class="brand-badge" aria-hidden="true">CA</span>
+        <span>
+          <span class="brand-title">Cotidiano Acessível</span>
+          <span class="brand-subtitle">Artigos e relatos sobre inclusão na vida diária</span>
+        </span>
+      </a>
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal do portal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade-cidade.html">Cidade e Transporte</a></li>
+          <li><a href="servicos-digitais.html">Bancos, Saúde e Serviços</a></li>
+          <li><a href="educacao-cultura.html" aria-current="page">Educação e Cultura</a></li>
+          <li><a href="glossario.html">Glossário</a></li>
+          <li><a href="contato.html">Relato do Cotidiano</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Você está aqui">
+      <ol>
+        <li><a href="index.html">Início</a></li>
+        <li aria-current="page">Educação e Cultura</li>
+      </ol>
+    </nav>
+    <article aria-labelledby="titulo-cultura">
+      <header class="hero">
+        <span class="hero-tag">Artigo • Educação, Trabalho e Lazer</span>
+        <h1 id="titulo-cultura">Cinema com Audiodescrição, Museus Táteis e Salas de Aula Inclusivas</h1>
+        <p class="lead">
+          Viver plenamente em sociedade envolve aprender, trabalhar, divertir-se e consumir cultura. A acessibilidade comunicacional e atitudinal abre portas nas escolas, nas empresas, nos teatros e nas redes sociais.
+        </p>
+        <div class="article-meta">
+          <span>Tempo estimado de leitura: 4 minutos</span>
+          <span>Tema: Educação Inclusiva, Cultura e Redes Sociais</span>
+        </div>
+      </header>
+
+      <nav id="sumario-cultura" class="toc-box" aria-labelledby="titulo-sumario-cult">
+        <h2 id="titulo-sumario-cult">Neste Artigo</h2>
+        <ul>
+          <li><a href="#cinema-museus">1. Audiodescrição e visitas táteis: sentindo a arte por múltiplos sentidos</a></li>
+          <li><a href="#educacao-trabalho">2. Escola e ambiente de trabalho: materiais acessíveis desde o início</a></li>
+          <li><a href="#redes-sociais">3. Acessibilidade nas redes sociais do dia a dia (#PraTodosVerem)</a></li>
+        </ul>
+      </nav>
+
+      <section id="cinema-museus" class="article-section">
+        <h2>1. Audiodescrição e visitas táteis: sentindo a arte por múltiplos sentidos</h2>
+        <p>
+          Ir ao cinema ou visitar um museu no fim de semana é um programa clássico do cotidiano. Para que pessoas cegas ou com baixa visão participem da experiência, a <strong>audiodescrição</strong> insere uma faixa de narração adicional nos intervalos dos diálogos, descrevendo expressões faciais, cenários, figurinos e ações visuais importantes da trama.
+        </p>
+        <p>
+          Nos museus e centros culturais, maquetes táteis, réplicas autorizadas para toque, legendas em Braille e videoguia em Libras transformam exposições antes exclusivamente visuais em experiências ricas para todos os visitantes.
+        </p>
+        <a class="back-top" href="#sumario-cultura">Voltar ao índice do artigo</a>
+      </section>
+
+      <section id="educacao-trabalho" class="article-section">
+        <h2>2. Escola e ambiente de trabalho: materiais acessíveis desde o início</h2>
+        <p>
+          Na universidade ou no trabalho, enviar uma apostila em PDF digitalizado como imagem (sem texto selecionável) impede que estudantes ou colegas cegos leiam o conteúdo com sintetizador de voz. Criar documentos com títulos estruturados, descrever gráficos em aula e legendar gravações de reuniões são práticas simples que mantêm toda a equipe incluída.
+        </p>
+        <a class="back-top" href="#sumario-cultura">Voltar ao índice do artigo</a>
+      </section>
+
+      <section id="redes-sociais" class="article-section">
+        <h2>3. Acessibilidade nas redes sociais do dia a dia</h2>
+        <p>
+          Qualquer pessoa pode praticar a acessibilidade todos os dias ao publicar uma foto, um vídeo ou um convite digital:
+        </p>
+        <ul>
+          <li><strong>Descreva suas imagens:</strong> Preencha o campo de texto alternativo nas redes sociais ou inclua uma descrição objetiva na legenda explicando quem aparece na foto, onde estão e o que está acontecendo.</li>
+          <li><strong>Legende vídeos curtos e stories:</strong> Grande parte dos vídeos é assistida sem som no transporte público, e as legendas garantem compreensão imediata para pessoas surdas.</li>
+          <li><strong>Use hashtags em CamelCase:</strong> Escrever <code>#AcessibilidadeNoCotidiano</code> com iniciais maiúsculas permite que o leitor de tela pronuncie cada palavra separadamente, em vez de ler tudo junto de forma incompreensível.</li>
+        </ul>
+        <a class="back-top" href="#sumario-cultura">Voltar ao índice do artigo</a>
+      </section>
+    </article>
+  </main>
+
+  <footer id="rodape" class="site-footer" tabindex="-1">
+    <div class="footer-inner">
+      <div>
+        <p><strong>Portal Cotidiano Acessível</strong> — Projeto Acadêmico de Programação Web (TDE 02).</p>
+        <p>Conteúdo dedicado à acessibilidade na vida cotidiana, construído com HTML5 semântico, CSS3 responsivo e recursos assistivos alinhados às diretrizes WCAG 2.1 (AA/AAA) e eMAG 3.1.</p>
+      </div>
+      <nav aria-label="Mapa do portal no rodapé">
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade-cidade.html">Cidade e Transporte</a></li>
+          <li><a href="servicos-digitais.html">Bancos, Saúde e Serviços</a></li>
+          <li><a href="educacao-cultura.html">Educação e Cultura</a></li>
+          <li><a href="glossario.html">Glossário</a></li>
+          <li><a href="contato.html">Relato do Cotidiano</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    if (window.VLibras) {
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    }
+  </script>
+  <script src="js/acessibilidade.js"></script>
+</body>
+</html>

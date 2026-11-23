@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" role="img" aria-labelledby="t2 d2">
+  <title id="t2">Como o Desenho Universal beneficia toda a sociedade no cotidiano</title>
+  <desc id="d2">Esquema em três colunas mostrando que recursos criados para acessibilidade ajudam pessoas com deficiência permanente, pessoas com limitações temporárias e qualquer pessoa em situações do dia a dia.</desc>
+  <rect width="800" height="250" rx="16" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+  <g transform="translate(30, 28)">
+    <rect width="230" height="194" rx="12" fill="#ffffff" stroke="#1d4ed8" stroke-width="2"/>
+    <text x="115" y="38" text-anchor="middle" fill="#1e3a8a" font-family="sans-serif" font-size="15" font-weight="bold">Deficiência Permanente</text>
+    <text x="115" y="72" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="13">Pessoa cega usando leitor</text>
+    <text x="115" y="92" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="13">de tela no internet banking,</text>
+    <text x="115" y="112" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="13">cadeirante usando rampa ou</text>
+    <text x="115" y="132" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="13">pessoa surda lendo legendas.</text>
+  </g>
+  <g transform="translate(285, 28)">
+    <rect width="230" height="194" rx="12" fill="#ffffff" stroke="#0d9488" stroke-width="2"/>
+    <text x="115" y="38" text-anchor="middle" fill="#115e59" font-family="sans-serif" font-size="15" font-weight="bold">Limitação Temporária</text>
+    <text x="115" y="72" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="13">Pessoa com braço engessado</text>
+    <text x="115" y="92" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="13">navegando só pelo teclado,</text>
+    <text x="115" y="112" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="13">ou após dilatação de pupila</text>
+    <text x="115" y="132" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="13">aumentando a letra do site.</text>
+  </g>
+  <g transform="translate(540, 28)">
+    <rect width="230" height="194" rx="12" fill="#ffffff" stroke="#b45309" stroke-width="2"/>
+    <text x="115" y="38" text-anchor="middle" fill="#92400e" font-family="sans-serif" font-size="15" font-weight="bold">Barreira Situacional</text>
+    <text x="115" y="72" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="13">Pai empurrando carrinho de</text>
+    <text x="115" y="92" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="13">bebê na rampa, ou passageiro</text>
+    <text x="115" y="112" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="13">no metrô barulhento lendo</text>
+    <text x="115" y="132" text-anchor="middle" fill="#334155" font-family="sans-serif" font-size="13">legenda de vídeo sem fone.</text>
+  </g>
+</svg>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cidade e Transporte | Cotidiano Acessível</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="skip-links">
+    <a href="#conteudo-principal">Ir para o conteúdo principal</a>
+    <a href="#menu-principal">Ir para o menu de navegação</a>
+    <a href="#rodape">Ir para o rodapé</a>
+  </div>
+
+  <section class="a11y-toolbar" aria-label="Barra de ferramentas de acessibilidade">
+    <div class="a11y-toolbar-inner">
+      <ul class="a11y-shortcuts">
+        <li><a href="#conteudo-principal" accesskey="1">Conteúdo <kbd>Alt+1</kbd></a></li>
+        <li><a href="#menu-principal" accesskey="2">Menu <kbd>Alt+2</kbd></a></li>
+        <li><a href="#rodape" accesskey="3">Rodapé <kbd>Alt+3</kbd></a></li>
+      </ul>
+      <div class="a11y-controls" role="group" aria-label="Controles rápidos de acessibilidade">
+        <button type="button" id="btn-contrast" class="a11y-btn" aria-pressed="false">Alto Contraste</button>
+        <button type="button" id="btn-dark-mode" class="a11y-btn" aria-pressed="false">Modo Escuro</button>
+        <button type="button" id="btn-font-up" class="a11y-btn" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" id="btn-font-reset" class="a11y-btn" aria-label="Restaurar tamanho padrão da fonte">A</button>
+        <button type="button" id="btn-font-down" class="a11y-btn" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button type="button" id="btn-a11y-drawer" class="a11y-btn" aria-expanded="false" aria-controls="a11y-drawer">Mais Recursos</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="a11y-drawer" class="a11y-drawer" aria-label="Painel avançado de acessibilidade" hidden>
+    <div class="a11y-drawer-inner">
+      <div class="a11y-drawer-header">
+        <h2>Central de Recursos Assistivos</h2>
+        <div>
+          <button type="button" id="btn-reset-a11y" class="a11y-btn-light" style="margin-right: 0.5rem;">Restaurar Padrão</button>
+          <button type="button" id="btn-a11y-close" class="a11y-btn-light">Fechar (Esc)</button>
+        </div>
+      </div>
+
+      <div class="a11y-grid">
+        <button type="button" id="btn-dyslexia" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Espaçamento Dislexia</span>
+          <span class="a11y-tile-desc">Aumenta altura da linha e distância entre letras e palavras.</span>
+        </button>
+
+        <button type="button" id="btn-highlight-links" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Destacar Todos os Links</span>
+          <span class="a11y-tile-desc">Aplica fundo amarelo e borda visível em cada link da página.</span>
+        </button>
+
+        <button type="button" id="btn-reading-ruler" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Régua Guia de Leitura</span>
+          <span class="a11y-tile-desc">Exibe uma linha horizontal que acompanha o cursor na leitura.</span>
+        </button>
+
+        <button type="button" id="btn-reading-mask" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Máscara de Foco</span>
+          <span class="a11y-tile-desc">Escurece o entorno e mantém iluminada apenas a faixa de leitura.</span>
+        </button>
+
+        <button type="button" id="btn-reduce-motion" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Pausar Animações</span>
+          <span class="a11y-tile-desc">Desativa transições e movimentos visuais na interface.</span>
+        </button>
+
+        <div class="a11y-tile" style="cursor: default;">
+          <label for="select-color-sim" class="a11y-tile-title" style="margin: 0;">Filtro de Percepção de Cores</label>
+          <select id="select-color-sim" style="margin-top: 0.35rem; padding: 0.4rem; font-size: 0.88rem;">
+            <option value="none">Visão Padrão</option>
+            <option value="protanopia">Simular: Vermelho/Verde</option>
+            <option value="tritanopia">Simular: Azul/Amarelo</option>
+            <option value="monochromacy">Simular: Monocromacia</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="a11y-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-brand">
+        <span class="brand-badge" aria-hidden="true">CA</span>
+        <span>
+          <span class="brand-title">Cotidiano Acessível</span>
+          <span class="brand-subtitle">Artigos e relatos sobre inclusão na vida diária</span>
+        </span>
+      </a>
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal do portal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade-cidade.html" aria-current="page">Cidade e Transporte</a></li>
+          <li><a href="servicos-digitais.html">Bancos, Saúde e Serviços</a></li>
+          <li><a href="educacao-cultura.html">Educação e Cultura</a></li>
+          <li><a href="glossario.html">Glossário</a></li>
+          <li><a href="contato.html">Relato do Cotidiano</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Você está aqui">
+      <ol>
+        <li><a href="index.html">Início</a></li>
+        <li aria-current="page">Cidade e Transporte</li>
+      </ol>
+    </nav>
+    <article aria-labelledby="titulo-mobilidade">
+      <header class="hero">
+        <span class="hero-tag">Artigo • Mobilidade Urbana e Espaço Público</span>
+        <h1 id="titulo-mobilidade">Do Ponto de Ônibus ao Semáforo: Os Desafios de Circular pela Cidade</h1>
+        <p class="lead">
+          Sair de casa para estudar, trabalhar ou encontrar amigos é um gesto cotidiano que pressupõe autonomia. No entanto, para milhões de brasileiros, cada quarteirão exige planejamento antecipado para contornar degraus, buracos e falta de sinalização.
+        </p>
+        <div class="article-meta">
+          <span>Tempo estimado de leitura: 4 minutos</span>
+          <span>Tema: Direito à Cidade e Transporte Público</span>
+        </div>
+      </header>
+
+      <nav id="sumario-mobilidade" class="toc-box" aria-labelledby="titulo-sumario-mob">
+        <h2 id="titulo-sumario-mob">Neste Artigo</h2>
+        <ul>
+          <li><a href="#calcadas-piso">1. Calçadas, rampas e o papel do piso podotátil</a></li>
+          <li><a href="#transporte-coletivo">2. Ônibus, metrô e terminais: acessibilidade além da rampa</a></li>
+          <li><a href="#atitudes-urbanas">3. Pequenas atitudes cotidianas que bloqueiam ou liberam caminhos</a></li>
+        </ul>
+      </nav>
+
+      <section id="calcadas-piso" class="article-section">
+        <h2>1. Calçadas, rampas e o papel do piso podotátil</h2>
+        <p>
+          O trajeto cotidiano começa na calçada. Uma rampa de esquina construída com inclinação exagerada ou com um degrau de três centímetros no encontro com o asfalto impede a passagem segura de cadeiras de rodas manuais e motorizadas.
+        </p>
+        <p>
+          Para pessoas cegas ou com baixa visão, o <strong>piso tátil</strong> funciona como um mapa sob os pés e sob a bengala longa. Ele possui dois padrões essenciais que precisam ser respeitados:
+        </p>
+        <ul>
+          <li><strong>Piso tátil direcional:</strong> Possui relevos lineares paralelos que indicam o caminho livre e seguro a seguir em praças, estações e calçadas largas.</li>
+          <li><strong>Piso tátil de alerta:</strong> Possui relevos circulares (bolinhas) que avisam sobre mudanças de direção, início de escadas, rampas, faixas de pedestres ou obstáculos suspensos.</li>
+        </ul>
+        <p>
+          Quando comerciantes colocam placas de propaganda, mesas ou vasos de plantas exatamente sobre a faixa direcional do piso tátil, a pessoa cega perde sua referência de orientação e corre risco de colisão.
+        </p>
+        <a class="back-top" href="#sumario-mobilidade">Voltar ao índice do artigo</a>
+      </section>
+
+      <section id="transporte-coletivo" class="article-section">
+        <h2>2. Ônibus, metrô e terminais: acessibilidade além da rampa</h2>
+        <p>
+          No transporte público diário, a acessibilidade precisa atender diferentes necessidades ao mesmo tempo. Um veículo com plataforma elevatória só cumpre seu papel se o equipamento recebe manutenção preventiva e se o motorista para alinhado ao meio-fio.
+        </p>
+        <ul>
+          <li><strong>Informação sonora e visual simultânea:</strong> Anunciar o nome da próxima estação ou ponto em alto-falantes e painéis luminosos permite que tanto passageiros cegos quanto passageiros surdos saibam exatamente onde descer sem depender de terceiros.</li>
+          <li><strong>Semáforos sonoros:</strong> Nos cruzamentos movimentados, sinais sonoros indicam o momento seguro de travessia para pessoas com deficiência visual.</li>
+          <li><strong>Assentos preferenciais respeitados:</strong> Gestantes, pessoas idosas, pessoas com deficiência e pessoas com condições não visíveis (como fibromialgia ou transtorno do espectro autista) dependem do respeito espontâneo aos assentos reservados.</li>
+        </ul>
+        <a class="back-top" href="#sumario-mobilidade">Voltar ao índice do artigo</a>
+      </section>
+
+      <section id="atitudes-urbanas" class="article-section">
+        <h2>3. Pequenas atitudes cotidianas que bloqueiam ou liberam caminhos</h2>
+        <div class="table-wrapper">
+          <table>
+            <caption>Exemplos reais de barreiras urbanas no dia a dia e como evitá-las</caption>
+            <thead>
+              <tr>
+                <th scope="col">Situação Cotidiana</th>
+                <th scope="col">Barreira Criada</th>
+                <th scope="col">Prática Inclusiva</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Estacionar o carro</th>
+                <td>Parar em frente à rampa da esquina ou ocupar a vaga reservada "por apenas dois minutos".</td>
+                <td>Manter rampas e áreas de transferência totalmente livres em qualquer horário.</td>
+              </tr>
+              <tr>
+                <th scope="row">Pedir informações na rua</th>
+                <td>Segurar o braço de uma pessoa cega sem avisar ou falar apontando ("é logo ali").</td>
+                <td>Apresentar-se com a voz, oferecer o cotovelo se a pessoa quiser guia e dar referências claras ("à sua esquerda, após 20 passos").</td>
+              </tr>
+              <tr>
+                <th scope="row">Conversar com pessoa surda</th>
+                <td>Cobrir a boca, virar o rosto enquanto fala ou gritar.</td>
+                <td>Manter contato visual, falar em ritmo natural de frente para a pessoa ou utilizar recursos de escrita e Libras.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <a class="back-top" href="#sumario-mobilidade">Voltar ao índice do artigo</a>
+      </section>
+    </article>
+  </main>
+
+  <footer id="rodape" class="site-footer" tabindex="-1">
+    <div class="footer-inner">
+      <div>
+        <p><strong>Portal Cotidiano Acessível</strong> — Projeto Acadêmico de Programação Web (TDE 02).</p>
+        <p>Conteúdo dedicado à acessibilidade na vida cotidiana, construído com HTML5 semântico, CSS3 responsivo e recursos assistivos alinhados às diretrizes WCAG 2.1 (AA/AAA) e eMAG 3.1.</p>
+      </div>
+      <nav aria-label="Mapa do portal no rodapé">
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade-cidade.html">Cidade e Transporte</a></li>
+          <li><a href="servicos-digitais.html">Bancos, Saúde e Serviços</a></li>
+          <li><a href="educacao-cultura.html">Educação e Cultura</a></li>
+          <li><a href="glossario.html">Glossário</a></li>
+          <li><a href="contato.html">Relato do Cotidiano</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    if (window.VLibras) {
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    }
+  </script>
+  <script src="js/acessibilidade.js"></script>
+</body>
+</html>

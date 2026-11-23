@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glossário | Cotidiano Acessível</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <div class="skip-links">
+    <a href="#conteudo-principal">Ir para o conteúdo principal</a>
+    <a href="#menu-principal">Ir para o menu de navegação</a>
+    <a href="#rodape">Ir para o rodapé</a>
+  </div>
+
+  <section class="a11y-toolbar" aria-label="Barra de ferramentas de acessibilidade">
+    <div class="a11y-toolbar-inner">
+      <ul class="a11y-shortcuts">
+        <li><a href="#conteudo-principal" accesskey="1">Conteúdo <kbd>Alt+1</kbd></a></li>
+        <li><a href="#menu-principal" accesskey="2">Menu <kbd>Alt+2</kbd></a></li>
+        <li><a href="#rodape" accesskey="3">Rodapé <kbd>Alt+3</kbd></a></li>
+      </ul>
+      <div class="a11y-controls" role="group" aria-label="Controles rápidos de acessibilidade">
+        <button type="button" id="btn-contrast" class="a11y-btn" aria-pressed="false">Alto Contraste</button>
+        <button type="button" id="btn-dark-mode" class="a11y-btn" aria-pressed="false">Modo Escuro</button>
+        <button type="button" id="btn-font-up" class="a11y-btn" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button type="button" id="btn-font-reset" class="a11y-btn" aria-label="Restaurar tamanho padrão da fonte">A</button>
+        <button type="button" id="btn-font-down" class="a11y-btn" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button type="button" id="btn-a11y-drawer" class="a11y-btn" aria-expanded="false" aria-controls="a11y-drawer">Mais Recursos</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="a11y-drawer" class="a11y-drawer" aria-label="Painel avançado de acessibilidade" hidden>
+    <div class="a11y-drawer-inner">
+      <div class="a11y-drawer-header">
+        <h2>Central de Recursos Assistivos</h2>
+        <div>
+          <button type="button" id="btn-reset-a11y" class="a11y-btn-light" style="margin-right: 0.5rem;">Restaurar Padrão</button>
+          <button type="button" id="btn-a11y-close" class="a11y-btn-light">Fechar (Esc)</button>
+        </div>
+      </div>
+
+      <div class="a11y-grid">
+        <button type="button" id="btn-dyslexia" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Espaçamento Dislexia</span>
+          <span class="a11y-tile-desc">Aumenta altura da linha e distância entre letras e palavras.</span>
+        </button>
+
+        <button type="button" id="btn-highlight-links" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Destacar Todos os Links</span>
+          <span class="a11y-tile-desc">Aplica fundo amarelo e borda visível em cada link da página.</span>
+        </button>
+
+        <button type="button" id="btn-reading-ruler" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Régua Guia de Leitura</span>
+          <span class="a11y-tile-desc">Exibe uma linha horizontal que acompanha o cursor na leitura.</span>
+        </button>
+
+        <button type="button" id="btn-reading-mask" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Máscara de Foco</span>
+          <span class="a11y-tile-desc">Escurece o entorno e mantém iluminada apenas a faixa de leitura.</span>
+        </button>
+
+        <button type="button" id="btn-reduce-motion" class="a11y-tile" aria-pressed="false">
+          <span class="a11y-tile-title">Pausar Animações</span>
+          <span class="a11y-tile-desc">Desativa transições e movimentos visuais na interface.</span>
+        </button>
+
+        <div class="a11y-tile" style="cursor: default;">
+          <label for="select-color-sim" class="a11y-tile-title" style="margin: 0;">Filtro de Percepção de Cores</label>
+          <select id="select-color-sim" style="margin-top: 0.35rem; padding: 0.4rem; font-size: 0.88rem;">
+            <option value="none">Visão Padrão</option>
+            <option value="protanopia">Simular: Vermelho/Verde</option>
+            <option value="tritanopia">Simular: Azul/Amarelo</option>
+            <option value="monochromacy">Simular: Monocromacia</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="a11y-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-brand">
+        <span class="brand-badge" aria-hidden="true">CA</span>
+        <span>
+          <span class="brand-title">Cotidiano Acessível</span>
+          <span class="brand-subtitle">Artigos e relatos sobre inclusão na vida diária</span>
+        </span>
+      </a>
+      <nav id="menu-principal" class="main-nav" aria-label="Navegação principal do portal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade-cidade.html">Cidade e Transporte</a></li>
+          <li><a href="servicos-digitais.html">Bancos, Saúde e Serviços</a></li>
+          <li><a href="educacao-cultura.html">Educação e Cultura</a></li>
+          <li><a href="glossario.html" aria-current="page">Glossário</a></li>
+          <li><a href="contato.html">Relato do Cotidiano</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal" class="container" tabindex="-1">
+    <nav class="breadcrumb" aria-label="Você está aqui">
+      <ol>
+        <li><a href="index.html">Início</a></li>
+        <li aria-current="page">Glossário</li>
+      </ol>
+    </nav>
+    <article aria-labelledby="titulo-glossario">
+      <header class="hero">
+        <span class="hero-tag">Referência • Linguagem Clara e Cidadania</span>
+        <h1 id="titulo-glossario">Glossário de Acessibilidade na Vida Cotidiana</h1>
+        <p class="lead">
+          Conheça os principais conceitos que aparecem em leis, espaços urbanos, escolas, meios de transporte e serviços digitais do dia a dia. Digite no campo abaixo para filtrar os termos.
+        </p>
+      </header>
+
+      <section class="article-section" aria-labelledby="sec-busca-glossario">
+        <h2 id="sec-busca-glossario">Buscar Termo ou Conceito</h2>
+        <div class="form-group">
+          <label for="glossary-search">Filtrar glossário por palavra-chave:</label>
+          <input type="text" id="glossary-search" placeholder="Ex.: Audiodescrição, Libras, Piso tátil, Desenho Universal...">
+        </div>
+        <p id="glossary-count" class="field-hint" role="status" aria-live="polite"></p>
+
+        <div class="glossary-item">
+          <strong>Desenho Universal:</strong> Concepção de produtos, ambientes, programas e serviços a serem usados por todas as pessoas, sem necessidade de adaptação ou projeto específico.
+        </div>
+        <div class="glossary-item">
+          <strong>Audiodescrição:</strong> Recurso de acessibilidade comunicacional que traduz imagens em palavras, permitindo que pessoas cegas ou com baixa visão compreendam filmes, peças de teatro, aulas e eventos.
+        </div>
+        <div class="glossary-item">
+          <strong>Libras (Língua Brasileira de Sinais):</strong> Língua natural de modalidade gestual-visual utilizada pelas comunidades surdas no Brasil, reconhecida oficialmente pela Lei nº 10.436/2002.
+        </div>
+        <div class="glossary-item">
+          <strong>Piso Podotátil (Direcional e de Alerta):</strong> Revestimento com relevos instalado em calçadas, estações e edifícios para orientar o deslocamento seguro de pessoas com deficiência visual.
+        </div>
+        <div class="glossary-item">
+          <strong>Barreira Atitudinal:</strong> Atitudes ou comportamentos de pessoas que impeçam ou prejudiquem a participação social da pessoa com deficiência em igualdade de condições com as demais.
+        </div>
+        <div class="glossary-item">
+          <strong>Leitor de Tela:</strong> Software utilizado no computador ou smartphone (como NVDA, VoiceOver e TalkBack) que lê em voz alta ou envia para linha Braille os textos e botões da tela.
+        </div>
+        <div class="glossary-item">
+          <strong>Tecnologia Assistiva:</strong> Produtos, equipamentos, dispositivos, recursos, metodologias e serviços que promovem funcionalidade e autonomia para pessoas com deficiência ou mobilidade reduzida.
+        </div>
+        <div class="glossary-item">
+          <strong>Legenda Oculta (Closed Caption - CC):</strong> Transcrição sincronizada das falas, efeitos sonoros e trilha musical de um vídeo, ativada pelo espectador conforme sua necessidade.
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <footer id="rodape" class="site-footer" tabindex="-1">
+    <div class="footer-inner">
+      <div>
+        <p><strong>Portal Cotidiano Acessível</strong> — Projeto Acadêmico de Programação Web (TDE 02).</p>
+        <p>Conteúdo dedicado à acessibilidade na vida cotidiana, construído com HTML5 semântico, CSS3 responsivo e recursos assistivos alinhados às diretrizes WCAG 2.1 (AA/AAA) e eMAG 3.1.</p>
+      </div>
+      <nav aria-label="Mapa do portal no rodapé">
+        <ul class="footer-links">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="mobilidade-cidade.html">Cidade e Transporte</a></li>
+          <li><a href="servicos-digitais.html">Bancos, Saúde e Serviços</a></li>
+          <li><a href="educacao-cultura.html">Educação e Cultura</a></li>
+          <li><a href="glossario.html">Glossário</a></li>
+          <li><a href="contato.html">Relato do Cotidiano</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    if (window.VLibras) {
+      new window.VLibras.Widget("https://vlibras.gov.br/app");
+    }
+  </script>
+  <script src="js/acessibilidade.js"></script>
+</body>
+</html>
